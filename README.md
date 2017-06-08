@@ -1,10 +1,10 @@
 # Getting Started
 
-Super simple Angular app with 1 module and 2 routes 
+Super simple Angular App with with server side rendering (Universal)
 
 ## Get the Code
 ```
-git clone https://github.com/johnpapa/angular-tour-of-heroes.git toh
+git clone https://github.com/csilva2810/angular-toh-universal.git toh
 cd toh
 npm i
 ```
@@ -17,28 +17,20 @@ Runs the TypeScript compiler and launches the app
 npm start
 ```
 
-### Ahead of Time (AoT) Compilation 
+### Ahead of Time (AoT) Compilation
 
-Runs the Angular AoT compiler, rollup, uglify for an optimized bundle, then launches the app
-
-```
-npm run start-aot
-```
-
-### AoT + gzip 
-
-Runs AoT plus gzips and launches the app 
+Runs the Angular AoT compiler, rollup, uglify for an optimized bundle with Webpack, then launches the app
 
 ```
-gulp copy-aot-gzip
-npm run aot
-npm run rollup
-http-server
+npm run build:aot
+npm run serve:aot
 ```
 
-Notes:
-- Use your favorite server in place of `http-server`
-- This could be scripted, obviously
-- `lite-server` does not launch gzipped files by default.
+### Server Side Rendering (AoT) Compilation
 
+Runs the Angular Universal on Server Side with nodejs (Express) and returns Compiled HTML from server
 
+```
+npm run build:uni
+npm run serve:uni
+```
